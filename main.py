@@ -38,6 +38,34 @@ while run == True:
         if event.type==pygame.QUIT:
             run=False 
 
+    keypressed=pygame.key.get_pressed()
+    if keypressed[pygame.K_w]:
+        rocket.rect.y=rocket.rect.y-2
+    if keypressed[pygame.K_s]:
+        rocket.rect.y=rocket.rect.y+2
+    if keypressed[pygame.K_a]:
+        rocket.rect.x=rocket.rect.x-2
+    if keypressed[pygame.K_d]:
+        rocket.rect.x=rocket.rect.x+2
+    
+    if rocket.rect.x>=450:
+        rocket.rect.x=450
+    if rocket.rect.y>=381:
+        rocket.rect.y=381
+    if rocket.rect.x<=0:
+        rocket.rect.x=0
+    if rocket.rect.y<=0:
+        rocket.rect.y=0
+    
+
+
+
+
+
+    
+
+        
+
 
 
 
